@@ -1,157 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chain Danie</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chain Danie</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: radial-gradient(circle at top, #111 0%, #000 70%);
-      color: white;
-    }
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-    .hero {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
+<style>
 
-    h1 {
-      font-size: 64px;
-      letter-spacing: 6px;
-      margin: 0;
-    }
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top, #111 0%, #000 70%);
+  color: white;
+  overflow-x: hidden;
+}
 
-    .tagline {
-      margin-top: 12px;
-      color: #aaa;
-      font-size: 16px;
-      letter-spacing: 2px;
-      max-width: 500px;
-    }
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: fadeIn 1.5s ease;
+}
 
-    .buttons {
-      margin-top: 30px;
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 72px;
+  letter-spacing: 8px;
+  margin: 0;
+}
 
-    .btn {
-      padding: 10px 16px;
-      border: 1px solid #333;
-      border-radius: 8px;
-      text-decoration: none;
-      color: white;
-      transition: 0.2s;
-    }
+.tagline {
+  margin-top: 15px;
+  color: #aaa;
+  font-size: 16px;
+  letter-spacing: 2px;
+  max-width: 600px;
+}
 
-    .btn:hover {
-      background: white;
-      color: black;
-    }
+/* BUTTONS */
+.buttons {
+  margin-top: 40px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-    .section {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 80px 20px;
-      text-align: center;
-    }
+.btn {
+  padding: 10px 18px;
+  border: 1px solid #444;
+  border-radius: 999px;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
 
-    h2 {
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
+.btn:hover {
+  background: white;
+  color: black;
+  transform: translateY(-2px);
+}
 
-    p {
-      color: #bbb;
-      line-height: 1.7;
-    }
+/* SECTIONS */
+.section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 100px 20px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
 
-    .release {
-      background: #0d0d0d;
-      border-top: 1px solid #222;
-      border-bottom: 1px solid #222;
-    }
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-    .footer {
-      padding: 40px;
-      text-align: center;
-      color: #666;
-      font-size: 12px;
-    }
-  </style>
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+p {
+  color: #bbb;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+/* RELEASE */
+.release {
+  background: linear-gradient(180deg, #0d0d0d, #050505);
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+}
+
+/* FOOTER */
+.footer {
+  padding: 50px;
+  text-align: center;
+  color: #666;
+  font-size: 12px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+</style>
 </head>
 
 <body>
 
-  <!-- HERO -->
-  <div class="hero">
-    <h1>CHAIN DANIE</h1>
-    <div class="tagline">
-      Telling stories never meant for just one — across cultures, languages, and sound.
-    </div>
-
-    <div class="buttons">
-      <a class="btn" href="https://www.youtube.com/channel/UCfuMkm_2PR1KNxtv_DKio0A">YouTube</a>
-      <a class="btn" href="https://open.spotify.com/artist/3kG1iqmQoV31ssgibgbIJ4">Spotify</a>
-      <a class="btn" href="https://music.apple.com/us/artist/chain-danie/1557432090">Apple Music</a>
-      <a class="btn" href="https://www.instagram.com/chaindanie/">Instagram</a>
-    </div>
+<!-- HERO -->
+<div class="hero">
+  <h1>CHAIN DANIE</h1>
+  <div class="tagline">
+    Telling stories never meant for just one — across cultures, languages, and sound.
   </div>
 
-  <!-- LATEST RELEASE -->
-  <div class="section release">
-    <h2>Latest Release</h2>
-    <p>
-      A new chapter is on the way.<br><br>
-      The next release explores memory, distance, and the echoes people leave behind.<br>
-      Stay close.
-    </p>
+  <div class="buttons">
+    <a class="btn" href="https://www.youtube.com/channel/UCfuMkm_2PR1KNxtv_DKio0A">YouTube</a>
+    <a class="btn" href="https://open.spotify.com/artist/3kG1iqmQoV31ssgibgbIJ4">Spotify</a>
+    <a class="btn" href="https://music.apple.com/us/artist/chain-danie/1557432090">Apple Music</a>
+    <a class="btn" href="https://www.instagram.com/chaindanie/">Instagram</a>
   </div>
+</div>
 
-  <!-- ABOUT -->
-  <div class="section">
-    <h2>About the Artist</h2>
-    <p>
-      Chain Danie is a multilingual independent artist crafting emotionally-driven music across cultures and languages.
-    </p>
-    <p>
-      Born between worlds and shaped by Malay, Turkish, and Western influences, his sound moves between indie pop, acoustic, lo-fi, and atmospheric textures—blurring borders both sonically and lyrically.
-    </p>
-    <p>
-      Each release reflects an evolving journey through identity, memory, and connection, where no single language fully contains the story.
-    </p>
-  </div>
+<!-- LATEST RELEASE -->
+<div class="section release">
+  <h2>Latest Release</h2>
+  <p>
+    A new chapter is on the way.<br><br>
+    The next release explores memory, distance, and the echoes people leave behind.<br>
+    Stay close.
+  </p>
+</div>
 
-  <!-- PRESS -->
-  <div class="section">
-    <h2>Press & Features</h2>
-    <p>
-      Coverage, interviews, and features coming soon.
-    </p>
-  </div>
+<!-- ABOUT -->
+<div class="section">
+  <h2>About</h2>
+  <p>
+    Chain Danie is a multilingual independent artist crafting emotionally-driven music across cultures and languages.
+  </p>
+  <p>
+    Born between worlds and shaped by Malay, Turkish, and Western influences, his sound moves between indie pop, acoustic, lo-fi, and atmospheric textures—blurring borders both sonically and lyrically.
+  </p>
+  <p>
+    Each release reflects an evolving journey through identity, memory, and connection, where no single language fully contains the story.
+  </p>
+</div>
 
-  <!-- CONTACT -->
-  <div class="section">
-    <h2>Contact</h2>
-    <p>
-      For press, collaborations, or bookings:<br><br>
-      <strong>chaindanieofficial@gmail.com</strong>
-    </p>
-  </div>
+<!-- PRESS -->
+<div class="section">
+  <h2>Press & Features</h2>
+  <p>Coverage, interviews, and features coming soon.</p>
+</div>
 
-  <!-- FOOTER -->
-  <div class="footer">
-    © 2026 Chain Danie — All Rights Reserved
-  </div>
+<!-- CONTACT -->
+<div class="section">
+  <h2>Contact</h2>
+  <p>
+    For press, collaborations, or bookings:<br><br>
+    <strong>chaindanieofficial@gmail.com</strong>
+  </p>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  © 2026 Chain Danie — All Rights Reserved
+</div>
+
+<script>
+// Scroll reveal animation
+const sections = document.querySelectorAll('.section');
+
+window.addEventListener('scroll', () => {
+  sections.forEach(sec => {
+    const top = sec.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      sec.classList.add('show');
+    }
+  });
+});
+</script>
 
 </body>
 </html>
