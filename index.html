@@ -9,89 +9,122 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #0a0a0a;
+      background: radial-gradient(circle at top, #111 0%, #000 70%);
       color: white;
+    }
+
+    .hero {
+      height: 100vh;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
-      min-height: 100vh;
+      align-items: center;
       text-align: center;
     }
 
     h1 {
-      font-size: 48px;
-      letter-spacing: 2px;
-      margin-bottom: 10px;
+      font-size: 64px;
+      letter-spacing: 6px;
+      margin: 0;
     }
 
-    p {
+    .tagline {
+      margin-top: 10px;
       color: #aaa;
-      margin-bottom: 30px;
+      font-size: 16px;
+      letter-spacing: 2px;
     }
 
     .buttons {
+      margin-top: 30px;
       display: flex;
       gap: 12px;
       flex-wrap: wrap;
       justify-content: center;
     }
 
-    a {
+    .btn {
+      padding: 10px 16px;
+      border: 1px solid #333;
+      border-radius: 8px;
       text-decoration: none;
       color: white;
-      border: 1px solid #333;
-      padding: 10px 16px;
-      border-radius: 8px;
       transition: 0.2s;
     }
 
-    a:hover {
+    .btn:hover {
       background: white;
       color: black;
     }
 
     .section {
-      margin-top: 60px;
-      max-width: 600px;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 80px 20px;
+      text-align: center;
     }
 
-    .small {
-      font-size: 14px;
-      color: #777;
-      margin-top: 20px;
+    h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #bbb;
+      line-height: 1.6;
+    }
+
+    .release {
+      background: #0d0d0d;
+      border-top: 1px solid #222;
+      border-bottom: 1px solid #222;
+    }
+
+    .footer {
+      padding: 40px;
+      text-align: center;
+      color: #666;
+      font-size: 12px;
     }
   </style>
 </head>
 
 <body>
 
-  <h1>CHAIN DANIE</h1>
-  <p>Heartfelt. Homemade. Human.</p>
+  <!-- HERO -->
+  <div class="hero">
+    <h1>CHAIN DANIE</h1>
+    <div class="tagline">Heartfelt • Homemade • Human</div>
 
-  <div class="buttons">
-    <a href="https://open.spotify.com/artist/3kG1iqmQoV31ssgibgbIJ4">Spotify</a>
-    <a href="https://www.youtube.com/channel/UCfuMkm_2PR1KNxtv_DKio0A">YouTube</a>
-    <a href="https://music.apple.com/us/artist/chain-danie/1557432090">Apple Music</a>
-    <a href="https://www.instagram.com/chaindanie/">Instagram</a>
+    <div class="buttons">
+      <a class="btn" href="https://www.youtube.com/channel/UCfuMkm_2PR1KNxtv_DKio0A">YouTube</a>
+      <a class="btn" href="https://open.spotify.com/artist/3kG1iqmQoV31ssgibgbIJ4">Spotify</a>
+      <a class="btn" href="https://music.apple.com/us/artist/chain-danie/1557432090">Apple Music</a>
+      <a class="btn" href="https://www.instagram.com/chaindanie/">Instagram</a>
+    </div>
   </div>
 
-  <div class="section">
+  <!-- LATEST RELEASE -->
+  <div class="section release">
     <h2>Latest Release</h2>
-    <p style="color:#bbb;">
-      “Coming Soon."
+    <p>
+      “Coming Soon” — Stay Tune.
     </p>
   </div>
 
+  <!-- ABOUT -->
   <div class="section">
-    <h2>About</h2>
-    <p style="color:#bbb;">
+    <h2>About the Artist</h2>
+    <p>
       Chain Danie is an independent artist creating emotionally driven music that blends cultures, languages, and sound. His work moves between alternative-indie pop, acoustic, lo-fi, and atmospheric elements, exploring themes of identity, connection, and everything in between.
 Each project reflects a growing artistic journey—raw, evolving, and shaped by multiple influences across worlds.
     </p>
   </div>
 
-  <p class="small">© 2026 Chain Danie</p>
+  <!-- FOOTER -->
+  <div class="footer">
+    © 2026 Chain Danie — All Rights Reserved
+  </div>
 
 </body>
 </html>
